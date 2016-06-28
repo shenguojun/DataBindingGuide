@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NoDataBindingActivity">
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        tools:text="中信国安" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"
+        tools:text="sz000839" />
+
+    <TextView
+        android:id="@+id/current_price"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/code"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:textSize="26sp"
+        tools:text="18.94" />
+
+    <TextView
+        android:id="@+id/increase"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_price"
+        android:gravity="center_horizontal"
+        tools:text="0.01%" />
+
+    <TextView
+        android:id="@+id/open_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/current_price"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/current_price"
+        android:text="开:" />
+
+    <TextView
+        android:id="@+id/openning_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/open_text"
+        android:layout_toEndOf="@id/open_text"
+        android:paddingStart="5dp"
+        tools:text="19.00" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/increase"
+        android:layout_alignStart="@id/open_text"
+        android:text="收:" />
+
+    <TextView
+        android:id="@+id/closing_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/increase"
+        android:layout_toEndOf="@id/open_text"
+        android:paddingStart="5dp"
+        tools:text="18.97" />
+
+    <TextView
+        android:id="@+id/hprice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/current_price"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/openning_price"
+        android:text="高:" />
+
+    <TextView
+        android:id="@+id/hprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/open_text"
+        android:layout_toEndOf="@id/hprice_text"
+        android:paddingLeft="5dp"
+        tools:text="19.1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/increase"
+        android:layout_alignStart="@id/hprice_text"
+        android:text="额:" />
+
+    <TextView
+        android:id="@+id/turnover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/increase"
+        android:layout_toEndOf="@id/hprice_text"
+        android:paddingStart="5dp"
+        tools:text="7.91亿" />
+
+    <TextView
+        android:id="@+id/lprice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/current_price"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/hprice"
+        android:text="低:" />
+
+    <TextView
+        android:id="@+id/lprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/open_text"
+        android:layout_toEndOf="@id/lprice_text"
+        android:paddingStart="5dp"
+        tools:text="18.78" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/increase"
+        android:layout_alignStart="@id/lprice_text"
+        android:text="量:" />
+
+    <TextView
+        android:id="@+id/total_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/increase"
+        android:layout_toEndOf="@id/lprice_text"
+        android:paddingStart="5dp"
+        tools:text="42.1万" />
+
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DataBindingGuide</string>
+    <string name="no_databinding">非databindign实现</string>
+    <string name="databinding_simple">简单databindign实现</string>
+    <string name="databinding_include">include例子</string>
+    <string name="databinding_stub">stub例子</string>
+    <string name="expression">表达式例子</string>
+    <string name="databinding_adapter">adapter例子</string>
+    <string name="attribute_setting">attribute setting例子</string>
+</resources>

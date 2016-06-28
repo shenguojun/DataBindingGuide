@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/no_databinding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/no_databinding"
+                android:theme="@style/list_item_button"
+                android:onClick="noDataBindingClicked"/>
+
+            <Button
+                android:id="@+id/databinding_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/databinding_simple"
+                android:theme="@style/list_item_button"
+                android:onClick="basicDataBindingClicked"/>
+
+            <Button
+                android:id="@+id/expression_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/expression"
+                android:theme="@style/list_item_button" />
+
+            <Button
+                android:id="@+id/include_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/databinding_include"
+                android:theme="@style/list_item_button" />
+
+            <Button
+                android:id="@+id/viewstub_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/databinding_stub"
+                android:theme="@style/list_item_button" />
+
+            <Button
+                android:id="@+id/adapter_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/databinding_adapter"
+                android:theme="@style/list_item_button" />
+
+            <Button
+                android:id="@+id/attributesetting_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/attribute_setting"
+                android:theme="@style/list_item_button" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</layout>
