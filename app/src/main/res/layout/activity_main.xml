@@ -58,6 +58,7 @@
                 android:minHeight="?android:listPreferredItemHeight"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/databinding_include"
+                android:onClick="includeClicked"
                 android:theme="@style/list_item_button" />
 
             <Button
@@ -69,6 +70,7 @@
                 android:minHeight="?android:listPreferredItemHeight"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/databinding_stub"
+                android:onClick="viewStubsClicked"
                 android:theme="@style/list_item_button" />
 
             <Button

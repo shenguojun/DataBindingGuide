@@ -2,8 +2,8 @@ package com.xshen.databindingguide.ui;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.xshen.databindingguide.R;
@@ -35,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void expressionClicked(View view) {
         Intent intent = new Intent(this, ExpressionActivity.class);
+        startActivity(intent);
+    }
+
+    public void includeClicked(View view) {
+        Intent intent = new Intent(this, IncludeActivity.class);
+        startActivity(intent);
+    }
+
+    public void viewStubsClicked(View view) {
+        Intent intent = new Intent(this, ViewStubsActivity.class);
         startActivity(intent);
     }
 }

@@ -20,7 +20,9 @@
         <activity android:name=".ui.NoDataBindingActivity" />
         <activity android:name=".ui.BasicDataBindingActivity" />
         <activity android:name=".ui.ObservableActivity" />
-        <activity android:name=".ui.ExpressionActivity"></activity>
+        <activity android:name=".ui.ExpressionActivity" />
+        <activity android:name=".ui.IncludeActivity" />
+        <activity android:name=".ui.ViewStubsActivity"/>
     </application>
 
 </manifest>
