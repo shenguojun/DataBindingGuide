@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
+    <data class="BasicBinding">
 
-        <import type="com.xshen.databindingguide.util.VauleFormater" />
+        <import type="com.xshen.databindingguide.util.ValueFormater" />
 
         <variable
             name="data"
-            type="com.xshen.databindingguide.data.DataModel" />
+            type="com.xshen.databindingguide.data.StockDataModel" />
     </data>
 
     <RelativeLayout
@@ -42,7 +42,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:paddingRight="5dp"
-            android:text="@{VauleFormater.formatDouble(data.retData.stockinfo[0].currentPrice)}"
+            android:text="@{ValueFormater.formatDouble(data.retData.stockinfo[0].currentPrice)}"
             android:textSize="26sp"
             tools:text="18.94" />
 
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/current_price"
             android:gravity="center_horizontal"
-            android:text='@{String.format("%s%%", VauleFormater.formatDouble(data.retData.stockinfo[0].increase))}'
+            android:text='@{String.format("%s%%", ValueFormater.formatDouble(data.retData.stockinfo[0].increase))}'
             tools:text="0.01%" />
 
         <TextView
@@ -72,7 +72,7 @@
             android:layout_alignTop="@id/open_text"
             android:layout_toEndOf="@id/open_text"
             android:paddingStart="5dp"
-            android:text="@{VauleFormater.formatDouble(data.retData.stockinfo[0].OpenningPrice)}"
+            android:text="@{ValueFormater.formatDouble(data.retData.stockinfo[0].OpenningPrice)}"
             tools:text="19.00" />
 
         <TextView
@@ -89,7 +89,7 @@
             android:layout_alignBottom="@id/increase"
             android:layout_toEndOf="@id/open_text"
             android:paddingStart="5dp"
-            android:text="@{VauleFormater.formatDouble(data.retData.stockinfo[0].closingPrice)}"
+            android:text="@{ValueFormater.formatDouble(data.retData.stockinfo[0].closingPrice)}"
             tools:text="18.97" />
 
         <TextView
@@ -109,7 +109,7 @@
             android:layout_alignTop="@id/open_text"
             android:layout_toEndOf="@id/hprice_text"
             android:paddingLeft="5dp"
-            android:text="@{VauleFormater.formatDouble(data.retData.stockinfo[0].hPrice)}"
+            android:text="@{ValueFormater.formatDouble(data.retData.stockinfo[0].hPrice)}"
             tools:text="19.1" />
 
         <TextView
@@ -126,7 +126,7 @@
             android:layout_alignBottom="@id/increase"
             android:layout_toEndOf="@id/hprice_text"
             android:paddingStart="5dp"
-            android:text="@{VauleFormater.formatLong(data.retData.stockinfo[0].turnover)}"
+            android:text="@{ValueFormater.formatLong(data.retData.stockinfo[0].turnover)}"
             tools:text="7.91亿" />
 
         <TextView
@@ -146,7 +146,7 @@
             android:layout_alignTop="@id/open_text"
             android:layout_toEndOf="@id/lprice_text"
             android:paddingStart="5dp"
-            android:text="@{VauleFormater.formatDouble(data.retData.stockinfo[0].lPrice)}"
+            android:text="@{ValueFormater.formatDouble(data.retData.stockinfo[0].lPrice)}"
             tools:text="18.78" />
 
         <TextView
@@ -163,9 +163,8 @@
             android:layout_alignBottom="@id/increase"
             android:layout_toEndOf="@id/lprice_text"
             android:paddingStart="5dp"
-            android:text="@{VauleFormater.formatLong(data.retData.stockinfo[0].totalNumber)}"
+            android:text="@{ValueFormater.formatLong(data.retData.stockinfo[0].totalNumber)}"
             tools:text="42.1万" />
-
 
     </RelativeLayout>
 </layout>

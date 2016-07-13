@@ -3,12 +3,12 @@ package com.xshen.databindingguide.data;
 import java.util.List;
 
 /**
- * 说明：这是一个XXX类，主要完成什么功能
+ * 说明：数据模型
  *
  * @author shengj E-mail: shengj@rd.netease.com
  * @version 创建时间：2016-06-07 14:26
  */
-public class DataModel {
+public class StockDataModel {
 
     /**
      * errNum : 0

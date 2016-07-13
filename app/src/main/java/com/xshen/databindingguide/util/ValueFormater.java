@@ -8,7 +8,7 @@ import java.util.Locale;
  * @author shengj E-mail: shengj@rd.netease.com
  * @version 创建时间：2016-06-26 21:50
  */
-public class VauleFormater {
+public class ValueFormater {
 
     public static String formatDouble(double d) {
         return String.format(Locale.CHINA, "%.2f", d);

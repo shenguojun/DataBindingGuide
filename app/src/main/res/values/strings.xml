@@ -5,6 +5,12 @@
     <string name="databinding_include">include例子</string>
     <string name="databinding_stub">stub例子</string>
     <string name="expression">表达式例子</string>
-    <string name="databinding_adapter">adapter例子</string>
     <string name="attribute_setting">attribute setting例子</string>
+    <string name="separator">~~</string>
+    <string name="recyclerview">RecycleView/ListView例子</string>
+    <string name="converter">Converter例子</string>
+    <string name="Observable">Observable例子</string>
+    <string name="two_way_binding">two way binding例子</string>
+    <string name="animation">animation例子</string>
+    <string name="dependency_injection">dependency injection 例子</string>
 </resources>

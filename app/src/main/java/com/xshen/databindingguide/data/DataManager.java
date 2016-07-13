@@ -1,17 +1,20 @@
 package com.xshen.databindingguide.data;
 
 /**
- * 说明：这是一个XXX类，主要完成什么功能
+ * 说明：获取数据
  *
  * @author shengj E-mail: shengj@rd.netease.com
  * @version 创建时间：2016-06-26 16:52
  */
+
+import com.xshen.databindingguide.util.Setting;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 public class DataManager {
     private DataService api;
@@ -32,9 +35,10 @@ public class DataManager {
 
     public interface DataService {
         String DATA_URL = "https://api.myjson.com/";
+        String source = Setting.nextSourceId();
 
-        @GET("bins/3pj41")
-        Call<DataModel> getDataModel();
+        @GET("bins/{id}")
+        Call<StockDataModel> getDataModel(@Path("id") String id);
     }
 
     public DataService getApi() {
@@ -42,8 +46,7 @@ public class DataManager {
     }
 
     private void createApi() {
-        final OkHttpClient client = new OkHttpClient.Builder()
-                .build();
+        final OkHttpClient client = new OkHttpClient.Builder().build();
         api = new Retrofit.Builder()
                 .baseUrl(DataService.DATA_URL)
                 .client(client)

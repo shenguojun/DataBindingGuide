@@ -27,4 +27,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BasicDataBindingActivity.class);
         startActivity(intent);
     }
+
+    public void observableClicked(View view) {
+        Intent intent = new Intent(this, ObservableActivity.class);
+        startActivity(intent);
+    }
+
+    public void expressionClicked(View view) {
+        Intent intent = new Intent(this, ExpressionActivity.class);
+        startActivity(intent);
+    }
 }

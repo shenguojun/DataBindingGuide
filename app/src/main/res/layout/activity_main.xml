@@ -20,10 +20,10 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="noDataBindingClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/no_databinding"
-                android:theme="@style/list_item_button"
-                android:onClick="noDataBindingClicked"/>
+                android:theme="@style/list_item_button" />
 
             <Button
                 android:id="@+id/databinding_simple"
@@ -32,10 +32,10 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="basicDataBindingClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/databinding_simple"
-                android:theme="@style/list_item_button"
-                android:onClick="basicDataBindingClicked"/>
+                android:theme="@style/list_item_button" />
 
             <Button
                 android:id="@+id/expression_simple"
@@ -44,6 +44,7 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="expressionClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/expression"
                 android:theme="@style/list_item_button" />
@@ -71,18 +72,7 @@
                 android:theme="@style/list_item_button" />
 
             <Button
-                android:id="@+id/adapter_simple"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padding_normal"
-                android:elevation="@dimen/z_card"
-                android:minHeight="?android:listPreferredItemHeight"
-                android:stateListAnimator="@animator/raise"
-                android:text="@string/databinding_adapter"
-                android:theme="@style/list_item_button" />
-
-            <Button
-                android:id="@+id/attributesetting_simple"
+                android:id="@+id/attribute_setting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/padding_normal"
@@ -92,6 +82,71 @@
                 android:text="@string/attribute_setting"
                 android:theme="@style/list_item_button" />
 
+            <Button
+                android:id="@+id/recyclerview_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/recyclerview"
+                android:theme="@style/list_item_button" />
+
+            <Button
+                android:id="@+id/converter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/converter"
+                android:theme="@style/list_item_button" />
+
+            <Button
+                android:id="@+id/observable_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/Observable"
+                android:theme="@style/list_item_button" />
+
+            <Button
+                android:id="@+id/two_way_binding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/two_way_binding"
+                android:theme="@style/list_item_button" />
+
+            <Button
+                android:id="@+id/animation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/animation"
+                android:theme="@style/list_item_button" />
+
+            <Button
+                android:id="@+id/dependency_injection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="@string/dependency_injection"
+                android:theme="@style/list_item_button" />
 
         </LinearLayout>
     </ScrollView>

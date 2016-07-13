@@ -3,23 +3,23 @@ package com.xshen.databindingguide.ui;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.xshen.databindingguide.R;
 import com.xshen.databindingguide.data.DataManager;
-import com.xshen.databindingguide.data.DataModel;
+import com.xshen.databindingguide.data.StockDataModel;
 
 import java.util.List;
 
-import com.xshen.databindingguide.util.VauleFormater;
+import com.xshen.databindingguide.util.Setting;
+import com.xshen.databindingguide.util.ValueFormater;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * 说明：这是一个XXX类，主要完成什么功能
+ * 说明：没有使用databinding的例子
  *
  * @author shengj E-mail: shengj@rd.netease.com
  * @version 创建时间：2016-06-26 15:11
@@ -45,33 +45,33 @@ public class NoDataBindingActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        Call<DataModel> dataModelCall = DataManager.getInstance().getApi().getDataModel();
-        dataModelCall.enqueue(new Callback<DataModel>() {
+        Call<StockDataModel> dataModelCall = DataManager.getInstance().getApi().getDataModel(Setting.nextSourceId());
+        dataModelCall.enqueue(new Callback<StockDataModel>() {
             @Override
-            public void onResponse(Call<DataModel> call, Response<DataModel> response) {
-                DataModel data = response.body() != null ? response.body() : null;
-                DataModel.RetDataEntity retDataEntity = data == null ? null : data.getRetData();
+            public void onResponse(Call<StockDataModel> call, Response<StockDataModel> response) {
+                StockDataModel data = response.body() != null ? response.body() : null;
+                StockDataModel.RetDataEntity retDataEntity = data == null ? null : data.getRetData();
                 if (retDataEntity != null) {
-                    List<DataModel.RetDataEntity.StockinfoEntity> stockinfoEntities =
+                    List<StockDataModel.RetDataEntity.StockinfoEntity> stockinfoEntities =
                             retDataEntity.getStockinfo();
                     if (stockinfoEntities != null && stockinfoEntities.size() != 0) {
-                        DataModel.RetDataEntity.StockinfoEntity entity = stockinfoEntities.get(0);
+                        StockDataModel.RetDataEntity.StockinfoEntity entity = stockinfoEntities.get(0);
                         mName.setText(entity.getName());
-                        mHprice.setText(VauleFormater.formatDouble(entity.getHPrice()));
-                        mCurrentPrice.setText(VauleFormater.formatDouble(entity.getCurrentPrice()));
+                        mHprice.setText(ValueFormater.formatDouble(entity.getHPrice()));
+                        mCurrentPrice.setText(ValueFormater.formatDouble(entity.getCurrentPrice()));
                         mCode.setText(entity.getCode());
-                        mOpenningPrice.setText(VauleFormater.formatDouble(entity.getOpenningPrice()));
-                        mIncrease.setText(String.format("%s%%", VauleFormater.formatDouble(entity.getIncrease())));
-                        mLprice.setText(VauleFormater.formatDouble(entity.getLPrice()));
-                        mTurnover.setText(VauleFormater.formatLong(entity.getTurnover()));
-                        mTotalNumber.setText(VauleFormater.formatLong(entity.getTotalNumber()));
-                        mClosingPrice.setText(VauleFormater.formatDouble(entity.getClosingPrice()));
+                        mOpenningPrice.setText(ValueFormater.formatDouble(entity.getOpenningPrice()));
+                        mIncrease.setText(String.format("%s%%", ValueFormater.formatDouble(entity.getIncrease())));
+                        mLprice.setText(ValueFormater.formatDouble(entity.getLPrice()));
+                        mTurnover.setText(ValueFormater.formatLong(entity.getTurnover()));
+                        mTotalNumber.setText(ValueFormater.formatLong(entity.getTotalNumber()));
+                        mClosingPrice.setText(ValueFormater.formatDouble(entity.getClosingPrice()));
                     }
                 }
             }
 
             @Override
-            public void onFailure(Call<DataModel> call, Throwable t) {
+            public void onFailure(Call<StockDataModel> call, Throwable t) {
             }
         });
     }
