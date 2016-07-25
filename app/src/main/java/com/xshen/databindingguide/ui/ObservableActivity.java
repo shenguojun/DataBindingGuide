@@ -1,20 +1,17 @@
 package com.xshen.databindingguide.ui;
 
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableArrayList;
+import android.databinding.ObservableArrayMap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 
 import com.xshen.databindingguide.R;
-import com.xshen.databindingguide.data.DataManager;
-import com.xshen.databindingguide.data.StockDataModel;
+import com.xshen.databindingguide.data.ObservableUser;
+import com.xshen.databindingguide.data.User;
 import com.xshen.databindingguide.databinding.ActivityObservableBinding;
-import com.xshen.databindingguide.util.Setting;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * 说明：Observable 例子
@@ -24,37 +21,53 @@ import retrofit2.Response;
  */
 public class ObservableActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
     ActivityObservableBinding binding;
-    StockDataModel stockDataModel = new StockDataModel();
+    User user = new User();
+    ObservableUser observableUser = new ObservableUser();
+    ObservableArrayMap<String, Object> userMap = new ObservableArrayMap<>();
+    ObservableArrayList<Object> userList = new ObservableArrayList<>();
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_observable);
         binding.refreshLayout.setOnRefreshListener(this);
-        stockDataModel.setRetData(new StockDataModel.RetDataEntity());
-        binding.setData(stockDataModel);
-        initData();
+        binding.setUser(user);
+        binding.setObservableUser(observableUser);
+        binding.setUserList(userList);
+        binding.setUserMap(userMap);
+        user.setFirstName("Leon");
+        user.setLastName("Li");
+        user.setAge(22);
+        observableUser.firstName.set("Leon");
+        observableUser.lastName.set("Li");
+        observableUser.age.set(22);
+        userMap.put("firstName", "Leon");
+        userMap.put("lastName", "Li");
+        userMap.put("age", 22);
+        userList.add("Leon");
+        userList.add("Li");
+        userList.add(22);
     }
 
-    private void initData() {
-        Call<StockDataModel> dataModelCall = DataManager.getInstance().getApi().getDataModel(Setting.nextSourceId());
-        dataModelCall.enqueue(new Callback<StockDataModel>() {
-            @Override
-            public void onResponse(Call<StockDataModel> call, Response<StockDataModel> response) {
-                StockDataModel tmp = response.body();
-                stockDataModel.getRetData().getStockinfo().get(0).setCode(tmp.getRetData().getStockinfo().get(0).getCode());
-                binding.refreshLayout.setRefreshing(false);
-            }
-
-            @Override
-            public void onFailure(Call<StockDataModel> call, Throwable t) {
-                binding.refreshLayout.setRefreshing(false);
-            }
-        });
+    private void refresh() {
+        user.setFirstName("Jacky");
+        user.setLastName("Wang");
+        user.setAge(25);
+        observableUser.firstName.set("Jacky");
+        observableUser.lastName.set("Wang");
+        observableUser.age.set(25);
+        userMap.put("firstName", "Jacky");
+        userMap.put("lastName", "Wang");
+        userMap.put("age", 25);
+        userList.set(0, "Jacky");
+        userList.set(1, "Wang");
+        userList.set(2, 25);
+        binding.refreshLayout.setRefreshing(false);
     }
 
     @Override
     public void onRefresh() {
-        initData();
+        refresh();
     }
 }

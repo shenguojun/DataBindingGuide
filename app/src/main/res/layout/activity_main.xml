@@ -56,9 +56,9 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="includeClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/databinding_include"
-                android:onClick="includeClicked"
                 android:theme="@style/list_item_button" />
 
             <Button
@@ -68,9 +68,9 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="viewStubsClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/databinding_stub"
-                android:onClick="viewStubsClicked"
                 android:theme="@style/list_item_button" />
 
             <Button
@@ -80,6 +80,7 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="attributeSetClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/attribute_setting"
                 android:theme="@style/list_item_button" />
@@ -91,6 +92,7 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="recyclerClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/recyclerview"
                 android:theme="@style/list_item_button" />
@@ -102,6 +104,7 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="converterClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/converter"
                 android:theme="@style/list_item_button" />
@@ -113,6 +116,7 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="observableClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/Observable"
                 android:theme="@style/list_item_button" />

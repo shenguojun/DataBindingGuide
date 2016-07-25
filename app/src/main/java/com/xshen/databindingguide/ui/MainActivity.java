@@ -47,4 +47,20 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewStubsActivity.class);
         startActivity(intent);
     }
+
+    public void attributeSetClicked(View view) {
+        Intent intent = new Intent(this, AttributeSetterActivity.class);
+        startActivity(intent);
+    }
+
+    public void recyclerClicked(View view) {
+        Intent intent = new Intent(this, DynamicRecyclerActivity.class);
+        startActivity(intent);
+    }
+
+    public void converterClicked(View view) {
+        Intent intent = new Intent(this, ConverterActivity.class);
+        startActivity(intent);
+
+    }
 }

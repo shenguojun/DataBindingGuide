@@ -5,9 +5,6 @@ import android.databinding.Bindable;
 
 import com.xshen.databindingguide.BR;
 
-import java.util.List;
-import java.util.Map;
-
 /**
  * 说明：用户model
  *
@@ -20,6 +17,20 @@ public class User extends BaseObservable {
     private int age;
     private String gender;
     private String displayName;
+
+    public User(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    public User() {
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName;
+    }
 
     @Bindable
     public String getFirstName() {
