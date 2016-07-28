@@ -2,9 +2,8 @@ package com.xshen.databindingguide.ui;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.inputmethod.InputMethodManager;
 
 import com.xshen.databindingguide.R;
