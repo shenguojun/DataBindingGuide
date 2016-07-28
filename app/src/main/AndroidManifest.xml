@@ -26,7 +26,8 @@
         <activity android:name=".ui.ViewStubsActivity" />
         <activity android:name=".ui.AttributeSetterActivity" />
         <activity android:name=".ui.DynamicRecyclerActivity" />
-        <activity android:name=".ui.ConverterActivity"></activity>
+        <activity android:name=".ui.ConverterActivity" />
+        <activity android:name=".ui.TwoWayBindingActivity"></activity>
     </application>
 
 </manifest>

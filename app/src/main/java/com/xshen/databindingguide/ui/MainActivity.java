@@ -63,4 +63,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void twoWayClicked(View view) {
+        Intent intent = new Intent(this, TwoWayBindingActivity.class);
+        startActivity(intent);
+    }
 }
