@@ -27,7 +27,8 @@
         <activity android:name=".ui.AttributeSetterActivity" />
         <activity android:name=".ui.DynamicRecyclerActivity" />
         <activity android:name=".ui.ConverterActivity" />
-        <activity android:name=".ui.TwoWayBindingActivity"></activity>
+        <activity android:name=".ui.TwoWayBindingActivity" />
+        <activity android:name=".ui.TransitionActivity"></activity>
     </application>
 
 </manifest>

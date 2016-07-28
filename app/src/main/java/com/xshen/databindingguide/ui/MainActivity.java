@@ -68,4 +68,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TwoWayBindingActivity.class);
         startActivity(intent);
     }
+
+    public void animateClicked(View view) {
+        Intent intent = new Intent(this, TransitionActivity.class);
+        startActivity(intent);
+    }
 }

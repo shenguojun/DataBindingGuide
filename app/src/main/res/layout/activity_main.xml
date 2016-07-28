@@ -128,9 +128,9 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="twoWayClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/two_way_binding"
-                android:onClick="twoWayClicked"
                 android:theme="@style/list_item_button" />
 
             <Button
@@ -140,6 +140,7 @@
                 android:layout_marginBottom="@dimen/padding_normal"
                 android:elevation="@dimen/z_card"
                 android:minHeight="?android:listPreferredItemHeight"
+                android:onClick="animateClicked"
                 android:stateListAnimator="@animator/raise"
                 android:text="@string/animation"
                 android:theme="@style/list_item_button" />
