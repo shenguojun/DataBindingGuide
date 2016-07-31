@@ -73,4 +73,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TransitionActivity.class);
         startActivity(intent);
     }
+
+    public void DIClicked(View view) {
+        Intent intent = new Intent(this, DependencyInjectionActivity.class);
+        startActivity(intent);
+    }
 }
