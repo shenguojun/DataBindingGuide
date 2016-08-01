@@ -2,7 +2,6 @@ package com.xshen.databindingguide.data;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.text.TextUtils;
 
 import com.xshen.databindingguide.BR;
 

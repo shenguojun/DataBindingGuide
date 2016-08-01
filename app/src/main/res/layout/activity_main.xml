@@ -157,6 +157,18 @@
                 android:onClick="DIClicked"
                 android:theme="@style/list_item_button" />
 
+            <Button
+                android:id="@+id/login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_normal"
+                android:elevation="@dimen/z_card"
+                android:minHeight="?android:listPreferredItemHeight"
+                android:stateListAnimator="@animator/raise"
+                android:text="Login Form 例子"
+                android:onClick="loginFormClicked"
+                android:theme="@style/list_item_button" />
+
         </LinearLayout>
     </ScrollView>
 

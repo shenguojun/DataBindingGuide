@@ -4,6 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:name=".Application"
         android:allowBackup="true"
@@ -29,7 +34,14 @@
         <activity android:name=".ui.ConverterActivity" />
         <activity android:name=".ui.TwoWayBindingActivity" />
         <activity android:name=".ui.TransitionActivity" />
-        <activity android:name=".ui.DependencyInjectionActivity"></activity>
+        <activity android:name=".ui.DependencyInjectionActivity" />
+        <activity
+            android:name=".samples.loginform.LoginActivity"
+            android:parentActivityName=".ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.xshen.databindingguide.ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

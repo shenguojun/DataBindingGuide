@@ -98,5 +98,8 @@
 
     <!-- search -->
     <color name="search_background_scrim">#33000000</color>
+    <color name="list_divider_grey">#dad5cb</color>
+    <color name="text_grey">#9ea2a4</color>
+    <color name="text_hint">#e5e5e5</color>
 
 </resources>

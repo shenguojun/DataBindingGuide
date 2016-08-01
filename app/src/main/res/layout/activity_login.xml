@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="LoginBinding">
+
+        <import type="android.text.TextUtils" />
+
+        <import type="com.xshen.databindingguide.samples.loginform.LoginActivity" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="formData"
+            type="com.xshen.databindingguide.samples.loginform.LoginFormBean" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="40dp"
+        tools:context="com.xshen.databindingguide.samples.loginform.LoginActivity">
+
+        <LinearLayout
+            android:id="@+id/username_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/text_view_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_user" />
+
+            <AutoCompleteTextView
+                android:id="@+id/edit_email"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:completionThreshold="1"
+                android:hint="网易邮箱（如163邮箱）"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@={formData.email}"
+                android:textColor="@color/text_grey"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/text_30px" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:src="@{LoginActivity.isValidEmail(formData.email) ? @drawable/ic_done_green_200_18dp : @drawable/ic_error_outline_red_300_18dp}"
+                android:visibility="@{TextUtils.isEmpty(formData.email) ? View.GONE : View.VISIBLE}" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_username"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/list_divider_grey" />
+
+        <LinearLayout
+            android:id="@+id/password_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="18dp">
+
+            <ImageView
+                android:id="@+id/text_view_pass_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_password" />
+
+            <EditText
+                android:id="@+id/edit_text_pass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:background="@null"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:text="@={formData.password}"
+                android:textColor="@color/text_grey"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/text_30px" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_password"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/list_divider_grey" />
+
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/selector_login_bg"
+            android:enabled="@{LoginActivity.isValidEmail(formData.email) &amp;&amp; !TextUtils.isEmpty(formData.email) &amp;&amp; !TextUtils.isEmpty(formData.password)}"
+            android:gravity="center"
+            android:onClick="formSubmit"
+            android:padding="14dp"
+            android:text="立即登录"
+            android:textColor="@drawable/selector_highlight_text_bg"
+            android:textSize="@dimen/text_36px" />
+
+    </LinearLayout>
+</layout>

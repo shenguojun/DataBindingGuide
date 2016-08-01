@@ -104,5 +104,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="text_30px">15sp</dimen>
     <dimen name="text_20px">10sp</dimen>
+    <dimen name="text_36px">18sp</dimen>
 
 </resources>
