@@ -3,7 +3,7 @@ package com.xshen.databindingguide.util;
 /**
  * 说明：设置项
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-06-07 14:25
  */
 public class Setting {

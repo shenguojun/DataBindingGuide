@@ -7,7 +7,7 @@ import android.widget.Toast;
 /**
  * 说明：这是一个XXX类，主要完成什么功能
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-07-12 23:05
  */
 public class Presenter {

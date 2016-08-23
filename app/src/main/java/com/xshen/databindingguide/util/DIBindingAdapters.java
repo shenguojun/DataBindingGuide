@@ -6,7 +6,7 @@ import android.widget.TextView;
 /**
  * 说明：Dependency injection component
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-07-31 14:51
  */
 public abstract class DIBindingAdapters {

@@ -9,7 +9,7 @@ import com.xshen.databindingguide.databinding.DynamicTextViewBinding;
 /**
  * 说明：RecyclerView adapter
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-07-24 23:01
  */
 public class DynamicAdapter extends RecyclerView.Adapter<DynamicAdapter.ViewHolder> {

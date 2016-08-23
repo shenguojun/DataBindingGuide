@@ -53,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     public static boolean isValidEmail(CharSequence text) {

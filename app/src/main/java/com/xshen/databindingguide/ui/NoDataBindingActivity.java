@@ -8,11 +8,10 @@ import android.widget.TextView;
 import com.xshen.databindingguide.R;
 import com.xshen.databindingguide.data.DataManager;
 import com.xshen.databindingguide.data.StockDataModel;
-
-import java.util.List;
-
 import com.xshen.databindingguide.util.Setting;
 import com.xshen.databindingguide.util.ValueFormater;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,7 +20,7 @@ import retrofit2.Response;
 /**
  * 说明：没有使用databinding的例子
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-06-26 15:11
  */
 public class NoDataBindingActivity extends AppCompatActivity {

@@ -11,7 +11,7 @@ import com.xshen.databindingguide.util.FontCache;
 /**
  * 说明：自定义可以设置字体的TextView
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-07-21 22:53
  */
 

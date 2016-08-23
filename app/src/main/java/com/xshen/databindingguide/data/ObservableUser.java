@@ -6,7 +6,7 @@ import android.databinding.ObservableInt;
 /**
  * 说明：用户model
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-07-12 22:11
  */
 public class ObservableUser {

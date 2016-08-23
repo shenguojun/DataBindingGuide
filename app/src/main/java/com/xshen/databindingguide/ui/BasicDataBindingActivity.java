@@ -18,7 +18,7 @@ import retrofit2.Response;
 /**
  * 说明：基础使用databinding的例子
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-06-26 21:47
  */
 public class BasicDataBindingActivity extends AppCompatActivity {

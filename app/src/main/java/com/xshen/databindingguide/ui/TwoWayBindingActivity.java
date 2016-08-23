@@ -11,7 +11,7 @@ import com.xshen.databindingguide.databinding.TwoWayBinding;
 /**
  * 说明：Two way databinding 例子
  *
- * @author gzshenguojun E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-07-28 20:53
  */
 public class TwoWayBindingActivity extends AppCompatActivity {

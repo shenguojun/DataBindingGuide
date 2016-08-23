@@ -3,7 +3,7 @@ package com.xshen.databindingguide.data;
 /**
  * 说明：获取数据
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-06-26 16:52
  */
 

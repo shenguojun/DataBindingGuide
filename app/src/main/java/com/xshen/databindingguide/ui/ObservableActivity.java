@@ -16,7 +16,7 @@ import com.xshen.databindingguide.databinding.ActivityObservableBinding;
 /**
  * 说明：Observable 例子
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-07-03 14:58
  */
 public class ObservableActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
