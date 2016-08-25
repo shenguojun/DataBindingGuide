@@ -8,7 +8,7 @@ import com.xshen.databindingguide.BR;
 /**
  * 说明：提交的表单
  *
- * @author shengj E-mail: shengj@rd.netease.com
+ * @author shengj
  * @version 创建时间：2016-08-01 13:47
  */
 public class LoginFormBean extends BaseObservable {

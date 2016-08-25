@@ -9,6 +9,7 @@ import android.view.View;
 import com.xshen.databindingguide.R;
 import com.xshen.databindingguide.databinding.ActivityMainBinding;
 import com.xshen.databindingguide.samples.loginform.LoginActivity;
+import com.xshen.databindingguide.samples.loginform.nodatabinding.LoginNoDatabindingActivity;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding mMainBinding;
@@ -82,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void loginFormClicked(View view) {
         Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    public void loginFormNoDatabindingClicked(View view) {
+        Intent intent = new Intent(this, LoginNoDatabindingActivity.class);
         startActivity(intent);
     }
 }

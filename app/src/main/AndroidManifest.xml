@@ -42,6 +42,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.xshen.databindingguide.ui.MainActivity" />
         </activity>
+
+        <activity
+            android:name=".samples.loginform.nodatabinding.LoginNoDatabindingActivity"
+            android:parentActivityName=".ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.xshen.databindingguide.ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
