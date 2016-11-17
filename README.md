@@ -405,6 +405,10 @@ public class TestComponent implements android.databinding.DataBindingComponent {
 }
 
 ```
+## 未来计划
+1. 吸取DataBinding优点在实际项目中使用
+2. 对比Dagger2
+3. 看看DataBinding源码
 
 ## 参考
 1. [Data Binding官方指南](https://developer.android.com/topic/libraries/data-binding/index.html)
